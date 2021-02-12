@@ -1,39 +1,24 @@
-import React from 'react'
+// import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App'
-import Home from './components/Home'
-import Navbar from './components/Navbar'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'bootstrap-css-only/css/bootstrap.min.css'
 import 'mdbreact/dist/css/mdb.css'
-import Cards from './components/Products'
-import Tienda, { Location, Info } from './components/Tiendas'
-import Form from './components/Form'
-
+import React, { Fragment } from "react";
+import { MDBBtn } from "mdbreact";
 
 const AppRender = () => {
     return (
-        <div>
-            <Navbar />
-            <div className="container">
-                <Cards />
-            </div>
-            <div className="container">
-                <Cards />
-            </div>
-            <div className="container">
-                <Cards />
-            </div>
-            <div className="container text-center my-2">
-                <Tienda />
-                <Location />
-                <Form />
-                <Info />
-            </div>
-        </div>
+        <Fragment>
+        <MDBBtn color="primary">Primary</MDBBtn>
+        <MDBBtn>Default</MDBBtn>
+        <MDBBtn color="secondary">Secondary</MDBBtn>
+        <MDBBtn color="success">Success</MDBBtn>
+        <MDBBtn color="info">Info</MDBBtn>
+        <MDBBtn color="warning">Warning</MDBBtn>
+        <MDBBtn color="danger">Danger</MDBBtn>
+        <MDBBtn color="purple">Click</MDBBtn>
+      </Fragment>
     )
 }
-const str = 'Hello world from React';
-const element = <h1>{str}</h1>
 
-ReactDOM.render(<AppRender />, document.getElementById('root'));
+ReactDOM.render(<AppRender />, document.getElementById('root'))
